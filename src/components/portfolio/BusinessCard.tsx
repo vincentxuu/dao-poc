@@ -38,6 +38,8 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({
   };
 
   const handleContact = (type: string, value: string) => {
+    if (typeof window === 'undefined') return;
+    
     switch (type) {
       case 'email':
         window.location.href = `mailto:${value}`;
@@ -58,6 +60,8 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({
   };
 
   const handleShare = async () => {
+    if (typeof window === 'undefined') return;
+    
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
@@ -133,7 +137,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({
           className="flex items-center gap-2 text-sm hover:text-blue-600 transition-colors"
         >
           <QRCodeSVG
-            value={window.location.href}
+            value={typeof window !== 'undefined' ? window.location.href : ''}
             size={24}
             className="inline-block"
           />
@@ -169,7 +173,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({
       {showQR && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-xl">
-            <QRCodeSVG value={window.location.href} size={200} />
+            <QRCodeSVG value={typeof window !== 'undefined' ? window.location.href : ''} size={200} />
             <button
               onClick={() => setShowQR(false)}
               className="mt-4 w-full py-2 bg-gray-200 rounded-lg"

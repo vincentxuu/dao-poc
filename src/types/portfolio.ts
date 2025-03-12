@@ -23,7 +23,13 @@ export interface Milestone {
   relatedItems?: string[];
   type?: 'skill' | 'project' | 'achievement';
 }
-
+export interface Feedback {
+  id: string;
+  userId: string;
+  content: string;
+  rating?: number;
+  createdAt: string;
+}
 export interface LearningItem {
   id: string;
   title: string;
@@ -52,6 +58,8 @@ export interface LearningItem {
       live?: string;
     };
   };
+  achieved: boolean;
+  relatedItems?: string[];
   collaborators?: string[];
   feedback?: {
     id: string;

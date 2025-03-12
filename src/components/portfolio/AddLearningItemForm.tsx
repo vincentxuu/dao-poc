@@ -20,6 +20,7 @@ export default function AddLearningItemForm({ onSubmit, onCancel }: AddLearningI
       media: [] as { type: 'image' | 'video' | 'document' | 'code' | 'presentation'; url: string }[],
     },
     collaborators: [] as string[],
+    achieved: false,
   });
 
   const [newTag, setNewTag] = useState('');

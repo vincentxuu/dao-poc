@@ -12,6 +12,11 @@ export interface PortfolioProject {
   };
   mediaUrls?: string[];
   embedUrl?: string;
+  feedback?: {
+    comments: string[];
+    rating?: number;
+    lastUpdated: string;
+  };
   createdAt: string;
   updatedAt: string;
 }

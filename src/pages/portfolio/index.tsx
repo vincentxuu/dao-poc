@@ -65,6 +65,8 @@ const samplePortfolio: UserPortfolio = {
       tags: ['Python', 'Data Analysis', 'Smart City'],
       skills: ['Python', 'Data Analysis'],
       privacy: 'public',
+      achieved: true,
+      relatedItems: ['2'],
       content: {
         media: [{
           type: 'image',
@@ -465,10 +467,12 @@ function PortfolioContent() {
               </button>
             </div>
             <div className="p-6">
-              <AddPortfolioItemForm onSubmit={(newItem) => {
-                // Handle add item logic here
-                setShowAddForm(false);
-              }} />
+              <AddPortfolioItemForm 
+                onSubmit={(newItem) => {
+                  setShowAddForm(false);
+                }}
+                onCancel={() => setShowAddForm(false)}
+              />
             </div>
           </div>
         </div>

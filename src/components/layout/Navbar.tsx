@@ -19,7 +19,6 @@ const Navbar = () => {
     { href: '/learning-management', label: '學習計畫管理' },
     { href: '/profile', label: '個人名片管理' },
     { href: '/portfolio-management', label: '個人作品集管理' },
-    { href: '/website-management', label: '個人網站管理' },
     { href: '/toolbox', label: '百寶箱' },
     { href: '/network', label: '人脈資源庫' },
     { href: '/resources', label: '學習資源庫' }

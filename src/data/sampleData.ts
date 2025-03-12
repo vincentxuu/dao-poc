@@ -27,7 +27,8 @@ export const samplePortfolio: UserPortfolio = {
         bookmarks: 5,
         comments: 2,
         collaborationRequests: 1
-      }
+      },
+      achieved: true
     },
     {
       id: '2',
@@ -53,7 +54,8 @@ export const samplePortfolio: UserPortfolio = {
         bookmarks: 8,
         comments: 3,
         collaborationRequests: 2
-      }
+      },
+      achieved: true
     }
   ],
   currentView: {

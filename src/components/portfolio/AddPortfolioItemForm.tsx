@@ -34,7 +34,8 @@ const AddPortfolioItemForm = ({ onSubmit, onCancel }: AddPortfolioItemFormProps)
         media: mediaUrls.map(url => ({ type: 'image', url }))
       },
       collaborators: [],
-      feedback: []
+      feedback: [],
+      achieved: false
     };
     onSubmit(newItem);
     resetForm();

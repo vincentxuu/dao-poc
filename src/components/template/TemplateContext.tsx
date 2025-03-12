@@ -48,7 +48,12 @@ const defaultStyles = {
 
 const TemplateContext = createContext<TemplateContextType | undefined>(undefined);
 
-export function TemplateProvider({ children, template: initialTemplate = 'creative' }) {
+interface TemplateProviderProps {
+  children: React.ReactNode;
+  template?: Template;
+}
+
+export function TemplateProvider({ children, template: initialTemplate = 'creative' }: TemplateProviderProps) {
   const [template, setTemplate] = useState<Template>(initialTemplate);
 
   return (
